@@ -64,12 +64,19 @@ $(window).on('load', function() {
 		$(this).height(pi_width + 50);
 	});
 
+	if ($(window).width() > 991) {
+		port_fi.appendTo('.portfolio-intro');
+		port_si.find('.portfolio-item2').height(port_intro_h + 601);
+	}
 
-
-	/*------------------
+	$('.portfolio-item2.pi-style2').each(function() {
+		var pi_width = $(this).width();
+		$(this).height(pi_width + 50);
+	});
+/*------------------
 		Popup
 	--------------------*/
-	$('.portfolio-item').magnificPopup({
+	$('.portfolio-item2').magnificPopup({
 		type: 'image',
 		mainClass: 'img-popup-warp',
 		removalDelay: 400,
